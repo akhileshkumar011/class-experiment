@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        
+        /* Styles the box around the form */
+        fieldset {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 350px; /* Set a fixed width */
+        }
+
+        /* Styles the "Hotel Room Booking Form" title */
+        legend {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 10px; /* Adds spacing around the title */
+        }
+
+        /* Styles each form row (label + input) */
+        div {
+            margin-bottom: 15px;
+        }
+
+        /* Styles the text labels */
+        label {
+            display: block; /* Makes the label appear on its own line */
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        /* Styles all text inputs, date, number, select, and textarea */
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%; /* Makes all fields take up the full width */
+            padding: 8px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Specific style for the textarea */
+        textarea {
+            height: 100px; /* Sets a default height */
+            resize: vertical; /* Allows user to resize vertically only */
+        }
+
+        /* Container for the buttons */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Styles for the buttons */
+        button,
+        input[type="reset"] {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin: 0 5px; /* Adds space between buttons */
+        }
+        
+        button:hover,
+        input[type="reset"]:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Hotel Room Booking Form</legend>
+
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="user_name">
+            </div>
+
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="user_phone">
+            </div>
+
+            <div>
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin_date">
+            </div>
+
+            <div>
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout_date">
+            </div>
+
+            <div>
+                <label for="roomType">Room Type:</label>
+                <select id="roomType" name="room_type">
+                    <option value="single">Single</option>
+                    <option value="double" selected>Double</option> <option value="suite">Suite</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guest_count" min="1" value="1">
+            </div>
+
+            <div>
+                <label for="requests">Special Requests:</label>
+                <textarea id="requests" name="special_requests"></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Book Now</button>
+                
+                <input type="reset" value="Reset Form">
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
