@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: grid;
+            place-items: center;
+            min-height: 90vh;
+            margin: 0;
+        }
+
+        /* Styles the main form container */
+        form {
+            width: 500px;
+        }
+
+        /* Styles the box around the form */
+        fieldset {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styles the "Student Registration Form" title */
+        legend {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            padding: 0 10px;
+            color: #333;
+        }
+
+        /* Styles each form row */
+        div {
+            margin-bottom: 15px;
+        }
+
+        /* Styles the text labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        /* Styles all text inputs, email, and textarea */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Styles the gender radio button section */
+        .gender-group {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between radio buttons */
+        }
+        
+        /* Ensures radio button labels are aligned */
+        .gender-group label {
+            font-weight: normal;
+            margin-bottom: 0;
+            display: inline-block; /* Keep label next to radio */
+            margin-left: 3px;
+        }
+
+        .gender-group input[type="radio"] {
+            margin: 0;
+        }
+
+        /* Container for the buttons */
+        .button-container {
+            text-align: left;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* Styles for the buttons */
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        
+        input[type="reset"] {
+            background-color: #6c757d;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+        
+        /* Footer text styling */
+        footer p {
+            text-align: center;
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="submit.html" method="post">
+        <fieldset>
+            <legend>Student Registration Form</legend>
+
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="user_name" 
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" 
+                       placeholder="Enter your email address" required>
+            </div>
+
+            <div>
+                <label>Gender:</label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="contact">Contact No:</label>
+                <input type="tel" id="contact" name="user_contact" 
+                       placeholder="Enter phone number">
+            </div>
+
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" name="user_address" rows="4"></textarea>
+            </div>
+
+            <div class="button-container">
+                <input type="submit" value="Register">
+                <input type="reset" value="Clear">
+            </div>
+
+        </fieldset>
+    </form>
+    
+    <footer>
+        <p>&copy; 2023 Student Registration Portal</p>
+    </footer>
+
+</body>
+</html>
